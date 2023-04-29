@@ -26,10 +26,10 @@ app.get("/users",(req,res)=>{
 
 
 app.post("/users",(req,res)=>{
-    const data = req.data;
+    users = req.body;
     res.json({
         message:"data reveceived successfully",
-        users:data
+        users:users
     })
 })
 
