@@ -19,8 +19,33 @@ app.get("/about-us",(req,res)=>{
 let users = {}
 
 app.get("/users",(req,res)=>{
-    res.send(users)
+    res.json(users)
 })
+
+
+
+
+app.post("/users",(req,res)=>{
+    const data = req.data;
+    res.json({
+        message:"data reveceived successfully",
+        users:data
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.use((req,res)=>{
     
     res.status(404).sendFile("./views/404.html",{root:__dirname})
