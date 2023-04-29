@@ -1,12 +1,15 @@
 const express = require('express');
-const app = express()
 
+const app = express();
 
-app.get("/",()=>{
-    res.end("hi")
+app.get("/",(req,res)=>{
+    res.send("hi this is nig")
 })
 
+app.get("/about",(req,res)=>{
+    res.sendFile("./views/index.html",{root:__dirname})
+})
 
-app.get("/about",()=>{
-    res.end("niggeshwer")
+app.listen(200,()=>{
+    console.log("sick")
 })
