@@ -1,35 +1,47 @@
-const express = require('express');
 
+
+
+const express = require("express");
 const app = express();
+const PORT = 3000;
 
-app.use(express.json())
+app.use(express.json());
 
-app.get("/",(req,res)=>{
-    res.send("hi this is nig")
+let users = {};
+app.get("/users", (req, res) => {
+
+    res.send(users);
+
 })
-
-app.get("/about",(req,res)=>{
-    res.sendFile("./views/index.html",{root:__dirname})
-})
-
-
-app.get("/about-us",(req,res)=>{
-    res.redirect("/about")
-})
-let users = {}
-
-app.get("/users",(req,res)=>{
-    res.json(users)
-})
-
-
-
 
 app.post("/users",(req,res)=>{
     users = req.body;
     res.json({
-        message:"data reveceived successfully",
-        users:users
+        message:"data is received",
+        user:users
+    })
+})
+
+
+
+
+app.patch("/users",(req,res)=>{
+
+let updatedData;
+for(let key in users){
+    users[key]=updatedData[key]
+
+}
+    res.json({
+        message:"data updated successfully"
+    })
+
+})
+
+app.delete("/users",(req,res)=>{
+    users = {}
+    res.json({
+        message: "data deleted successfully"
     })
 })
 
@@ -38,24 +50,6 @@ app.post("/users",(req,res)=>{
 
 
 
-
-
-
-
-
-
-
-
-app.use((req,res)=>{
-    
-    res.status(404).sendFile("./views/404.html",{root:__dirname})
+app.listen(PORT, () => {
+    console.log("ngl")
 })
-
-
-
-
-
-app.listen(200,()=>{
-    console.log("sick")
-})
-
