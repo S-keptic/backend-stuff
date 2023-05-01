@@ -12,14 +12,17 @@ app.get("/users", (req, res) => {
 
 })
 
-app.post("/users",(req,res)=>{
+ea
+
+
+const postUser = ()=>{ app.post("/users",(req,res)=>{
     users = req.body;
     res.json({
         message:"data is received",
         user:users
     })
 })
-
+}
 
 
 
