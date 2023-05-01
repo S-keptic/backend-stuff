@@ -28,7 +28,7 @@ const postUser = ()=>{ app.post("/users",(req,res)=>{
 app.patch("/users",(req,res)=>{
 
 let updatedData;
-for(let key in users){
+for(let key in users){   
     users[key]=updatedData[key]
 
 }
