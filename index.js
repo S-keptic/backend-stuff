@@ -12,7 +12,7 @@ app.get("/users", (req, res) => {
 
 })
 
-
+ 
 
 const postUser = ()=>{ app.post("/users",(req,res)=>{
     users = req.body;
