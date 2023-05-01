@@ -22,7 +22,7 @@ const postUser = ()=>{ app.post("/users",(req,res)=>{
     })
 })
 }
-
+ 
 
 
 app.patch("/users",(req,res)=>{
