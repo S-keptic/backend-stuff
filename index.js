@@ -47,7 +47,10 @@ app.delete("/users",(req,res)=>{
 
 
 
-
+const userRouter-express.Router();
+userRouter
+.route('/')
+.post(postUser)
 
 
 app.listen(PORT, () => {
