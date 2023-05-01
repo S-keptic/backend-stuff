@@ -12,7 +12,6 @@ app.get("/users", (req, res) => {
 
 })
 
-ea
 
 
 const postUser = ()=>{ app.post("/users",(req,res)=>{
