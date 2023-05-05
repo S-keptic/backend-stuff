@@ -1,11 +1,25 @@
-const express = require('express');
-const chalk = require('chalk')
-const app = express();
-require('dotenv').config();
-let data;
+const express = require('express')
+const app  = express()
+require('dotenv').config()
 
-app.get("/",(req,res)=>{
-    res.send(data.json())
+app.use(express.json());
+
+
+
+
+let user = {}
+app.get('/user',(req,res)=>{
+
+res.send(user)
+
+
+})
+
+
+app.post("/user",(req,res)=>{
+    user = req.body
+    res.send("data updated successfully" + JSON.stringify(user))
+
 })
 
 
@@ -15,16 +29,10 @@ app.get("/",(req,res)=>{
 
 
 
-app.post("/",(req,res)=>{
-    data = req.body
-    res.send("data posted successfully")
-})
 
 
-
-
-
+  
 
 app.listen(process.env.PORT,()=>{
-    console.log(chalk.red(`server running on ${process.env.PORT}`))
+    console.log(`server is running on ${process.env.PORT}`)
 })
