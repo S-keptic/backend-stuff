@@ -18,7 +18,7 @@ app.post("/user",(req,res)=>{
     user = req.body
     res.send("data updated successfully" + JSON.stringify(user))
 
-})
+}) 
 
 
 
