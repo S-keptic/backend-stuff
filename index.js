@@ -3,9 +3,7 @@ const app  = express()
 require('dotenv').config()
 
 app.use(express.json());
-
-
-
+ 
 
 let user = {}
 app.get('/user',(req,res)=>{
@@ -24,7 +22,7 @@ app.post("/user",(req,res)=>{
 
 
 
-
+   
 
 
 
