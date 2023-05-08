@@ -7,7 +7,7 @@ app.use(express.json());
 
 let user = {}
 app.get('/user',(req,res)=>{
-
+ 
 res.send(user)
 
 
@@ -22,13 +22,7 @@ app.post("/user",(req,res)=>{
 
 
 
-   
-
-
-
-
-
-
+  
   
 
 app.listen(process.env.PORT,()=>{
