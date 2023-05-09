@@ -1,2 +1,2 @@
 const fs = require('fs')
-let hi = "ping "
+let hi = "ping  "
