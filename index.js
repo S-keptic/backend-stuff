@@ -19,7 +19,7 @@
 //             })
 //         })
 //     })
-// })
+// }) 
 
 
 //////////////////////////////////
@@ -39,7 +39,9 @@ const server = http.createServer((req,res)=>{
     const pathName = req.url
     
 if(pathName==='/nigga' || pathName==='black'){
-    res.end("get some niggas")
+    res.writeHead(404,{'Content-type': 'type/html'})
+    res.end("<h1>get some niggas</h1>")
+    
 }else{
     res.end("your momma black")
 }
