@@ -4,7 +4,7 @@ const app = express()
 const PORT = 3000;
 
 app.use(express.json())
-const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`))
+const tours = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)) 
 
 
 const getAllTours = (req,res)=>{
