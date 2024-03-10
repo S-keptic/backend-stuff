@@ -5,7 +5,7 @@ const port = 3000
 app.get("/",(req,res)=>{
     res.send("nigga is downbad")
 })
-app.listen(port,()=>{
+app.listen(port,()=>{ 
     console.log("server is up")
 })
 console.log(require)
